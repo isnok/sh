@@ -609,9 +609,9 @@ class Command(object):
 
             # we're doing a long arg
             else:
-                if k == 'ok_code':
-                    continue
                 if not raw:
+                    if k == 'ok_code':
+                        continue
                     k = k.replace("_", "-")
 
                 if v is True:
