@@ -705,7 +705,7 @@ If you're using glob.glob(), please use sh.glob() instead." % self._path, stackl
         # aggregate any 'with' contexts
         call_args = Command._call_args.copy()
         for prepend in self._prepend_stack:
-            # don't pass the 'with' call arg
+            # don't pass the 'with' and 'ok_code' call arg
             pcall_args = prepend.call_args.copy()
             try: del pcall_args["with"]
             except: pass
